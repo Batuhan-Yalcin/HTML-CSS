@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    background: url('resim/arkaplan.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+#hero button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#hero button:hover {
+    background-color: #218838;
+}
+
+#products {
+    background: url('resim/arkaplan2.jpg') no-repeat center center/cover;
+    padding: 20px;
+    text-align: center;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 300px;
+    background-color: white;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 18px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+#cart, #checkout {
+    padding: 20px;
+    text-align: center;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart ul li {
+    border-bottom: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+#cart ul li img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#checkout{
+    background: url('resim/arkaplan3.jpg') no-repeat center center/cover;
+}
+
+#cart{
+    background: url('resim/arkaplan6.jpg') no-repeat center center/cover;
+}
+
+p{
+    color: red;
+}
+
+h2{
+    color: yellow;
+}
+
+cart-item-image{
+color: white;
+}
