@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Sayfası</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    
+<div class="giris-form">
+    <!--         Giris-form kapsayıcı divim               -->
+    <!--         Form action yazarak önce formu oluşturdum                                         -->
+    <form action="index.html">
+        <h1>Üye Olunuz</h1>
+        <!--                   İnputlar ile formu açtım placeholder ile kutuların içinde yazılmasını istediğim yazıları girdim 
+                               ve inputların hepsine tek bir class verdim çünkü css de hepsini birden düzenlemek için required ile de zorunlu veri girişi sağladım                                                                     -->
+        <input type="text" placeholder="Adınızı Giriniz" class="txt" required="required">
+        <input type="text" placeholder="Soyadınızı Giriniz" class="txt" required="required">
+        <input type="email" name="email" placeholder="Mail Adresinizi Giriniz" class="txt" required="required">
+        <input type="password" name="şifre" placeholder="Şifrenizi Giriniz" class="txt" required="required">
+        <input type="number" name="tc" placeholder="Kimlik Bilgilerinizi Giriniz" class="txt" required="required">
+
+        <input type="submit" value="Hesap Oluşturun" class="giris-btn">
+        <!--     Burda input ile bir buton oluşturdum value yazan yer butonun altında yazacak yazı class verdim css de düzenlemek için a href ilede yönlendirme yaptım                                               -->
+        <a href="giriş.html">Zaten Bir Hesabınız Varmı?</a>
+    </form>
+</div> 
+</body>
+</html>

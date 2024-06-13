@@ -1,0 +1,141 @@
+/* body e margin padding 0 verdim ki sayfada üst tarafta kalan boşluklar kaldırılsın ve sayfanın en üstünden başlansın diye */
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #131034;
+}
+
+/* Giris-form 
+
+css'imde yükseklik 300px verdim text align center ile metinleri ortaya hizaladım 
+   position absolute ile mutlak pozisyon verdim yani formlarımı sayfaya göre konumlandırmasını istedim 
+   top 50% left 50% transform: translate(-50%,-50%); ile formlarımı sayfanın ortasına hizaladım 
+   tranform translate özelliği demek nesnenin konumunu değiştirmek veya nesneyi kaydırmak için kullanmak demektir
+   overflow özelliği ile eğerki içerikte yazanlar belirtilen bir alana sığmıyorsa veya taşacak gibiyse owerflow hidden vererek taşmayı engellersin bende taşma ihtimaline
+   karşılık owerflow hidden verdim giris-form a
+*/
+
+.giris-form{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: url(./image/arkaplan3.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+/* Giris Form h1
+Üye olunuz yazısının rengi beyaz margin top yani yukarıdan boşluğu 100px olsun font büyüklüğü 40px olsun dedim
+ */
+.giris-form h1{
+    color: #fff;
+    margin-top: 100px;
+    font-size: 40px;
+}
+/* Giris-form input
+display block yazarak genişlik ve yükseklik ayarlamaya izin verdim 
+yükseklik 100% verdim üstten alttan 0 sağdan soldan 16 px padding verdim 
+padding ise elementin kenarlığı ile içeriği arasında verdiğim boşluk demek
+genişliği 44px verdim inputun içindeki yazıları text align center ile ortaladım border none ile inputların kenarlıklarını kaldırdım
+box sizing verme sebebim ise input etiketlerine genişliğine ve yüksekliğine padding ve border ı dahil etmek için bu olmazsa padding ve border yazsam da
+saymayacaktı
+*/
+.giris-form input{
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+}
+/*        .txt
+   inputlara verdiğim txt classı ile marginine        20px verdim çünkü inputların arasındaki boşluğu
+             genişletmek içindi
+             border radius ile yuvarlak kenar özelliği verdim yani 6 piksellik kenarlarını yumuşattım        
+*/
+.txt{
+    margin: 20px 0;
+    border-radius: 6px;
+}
+/* .giris-btn 
+hesap oluşturun butonunu margin top ile yukarıdan boşluğunu 60px verdim
+margin bottom ile aşşağıdan 20 piksel boşluk verdim 
+background yani arkaplanını mavi renk # diez ile verdim
+rengini beyaz yaptım 
+border radius yani kenar özelliklerini 44px yumuşattım
+cursor pointer ile tıklama özelliği verdim
+transition 0.8 ile de üzerine tıklandığında yavaşlamasını sağladım 
+display block etiketi altına aldım.
+  */
+.giris-btn{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background: #538fef;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: block;
+    
+}
+/* giris btn:hover demek fareyi götürdüğümüzde olacak işlemler demektir
+transform scale butonun fareyi götürünce yatay ve dikey boyutlarını değiştirmek için kullandım
+*/
+.giris-btn:hover{
+    transform: scale(0.96);
+    background: #fff;
+    color: #538fef;
+
+}
+/*  giris-form a 
+text decoration none ile yazının altında yazan çizgiyi kaldırdım
+a etiketindeki yazının rengini deepskyblue yaptım
+yazı büyüklüğünü 14px verdim
+paddingini yani kenarlığı ile içeriği arasındaki boşluğu 10px verdim
+transition 0.8s ile üzerine gelince yavaşça gelmesini sağladım 
+display block ile block etiketi altına aldım.
+*/
+.giris-form a{
+    text-decoration: none;
+    color: deepskyblue;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.8s;
+    display: block;
+}
+/* giris-form a:hover
+fareyi üzerine götürdüğümüzde a etiketinin renginin deeppink olmasını sağladım 
+*/
+.giris-form a:hover{
+    color: deeppink;
+
+}
+
+/*  top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   formu ortaya hizalamayı böyle yaptım hizalama kodları bunlar 
+
+   overflow: hidden; taşmaları engeller
+   display: block; inputları alt alta hizalayan kod
+   padding: 0 16px; üstten alttan 0 sağdan soldan 16px yazıları uzaklaştırdı
+   text-align: center; ile yazıları ortaladım inputun içindeki
+   box-sizing: border-box; inputların hepsini hizaladı eşit konuma getirdi
+   border: none; köşelikleri kaldırdım bunla
+   border-radius: 6px; inputların köşeliklerini 6px düzleştirdim
+
+   giris btn nin içindeki
+   margin-top: 60px; şifrenizi giriniz inputu ile 60 piksel uzaklaş diyorum ve aşşağı indiriyorum hesap oluşturun butonunu
+   margin-bottom: 20px; zaten bir hesabınız varmı yazısı ile margin bottom diyerek aşşağıdaki ile 20 px uzaklaş dedim
+   cursor: pointer; tıklama özelliğini aktif ettim
+
+
+   .giris-btn:hover{ 
+    transform:scale(0.96 demek fareyi götürdüğümde içine doğru gitmesini 0.96 hızda istemek demek
+
+    .giris form a içine yazdıklarım 
+    text-decoration: none; demek zaten bir hesabınız varmı yazısının altındaki çizgiyi kaldır dedim

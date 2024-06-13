@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/* 
+GOOGLE FONT ROBOTO YAZARAK GOOGLE A YAZI TİPİNİ ALDIM 
+*/
+
+
+/* * DEMEK TÜM SAYFAYA VERİLEN KOMUT DEMEK
+     Margin 0 ve padding 0 yapma sebebim sayfanın üstündeki o boşluğu silmek
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*
+.container
+background size özelliği ile arka plana eklediğim sitenin resmini siteye ortaladı ve hepsinin görünmesini sağladı
+*/
+.container{
+    background-image: url(./image/kalpli.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+}
+/*.navbar
+navbar yani kategorilerin divi
+genişliği yüzde yüz
+yükseklik 80px
+arka plan rgba ile renk o renk ana sayfa youtube a gidiniz vs. yazan yerin rengidir. 
+
+*/
+.container .navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(22, 112, 214, 0.4)
+}
+/* .navbar .logo
+logoyu margin left ile soldan sağa doğru 50px uzaklaştırdım 
+margin top ile yukarıdan aşşağı 20px uzaklaştırdım 
+display inline block koyma sebebim koymasaydım mavi rengin üstünde sayfanın beyazlığı kalıyor yani sayfa kayıyordu bu yüzden block etiketine çevirdim
+*/
+.navbar .logo{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;  
+}
+/* .navbar .logo a
+text decoration none özelliği ile logonun altındaki çizgiyi yok ettim
+font büyüklüğünü 30 px verdim
+yazı tipini sans serif yaptım
+rengini f3f3f3 ile beyaz hale getirdim  
+
+*/
+.navbar .logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #f3f3f3;
+}
+/* .navbar ul başlangıç !
+float right ile  ana sayfa youtube a gidiniz yazan kategorileri sitenin en sağına yasladım
+margin right 20px ile kategorilerin 20px sağa doğru kaymasını sağladım
+*/
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+
+/* .navbar ul li 
+
+kategorilerin css kısmı yani anasayfa youtube a gidiniz vs. yazan yer
+list style none özelliği ile listeleme yaptığımızda solunda noktalar oluşuyor onu yok ettim
+display inline block diyerek ana sayfa youtube a gidiniz kayıt ol giriş yap yazılarını yan yana getirdim üstlü altlıydı bunu yazana kadar
+margin 0 a 8px verme sebebim yazıların arasını açmamdı yazılar bitişikken aralarını açtım 
+line height  verme sebebim ise yazıları sağ üstte mavi rengin ortasına ortalamamdı 
+
+*/
+.navbar ul li{
+ list-style: none;
+ display: inline-block; 
+ margin: 0 8px;  
+ line-height: 80px;
+}
+/*  .navbar ul li a
+rengini beyaz yaptım 
+text decoration none ile altındaki çizgileri yok ettim
+fontunu 20 px büyüklüğe getirdim
+yazı tipini roboto yaptım
+padding 6px ile yukarıdan aşşa sağdan sola aralarını açtım
+
+
+*/
+.navbar ul li a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+   font-family: Roboto; 
+   transition: .5s;
+}
+/* active anasayfa yazısına verdiğim class hover ise fareyi götürünce yaptığımız işlemler için kullanılır       */
+
+.navbar ul li a.active,
+.navbar ul li a:hover{
+background: #ff6e00;
+border-radius: 2px;
+}
+
+/* .container .center Başlangıç !
+
+position absolute verme sebebim top ve left kodlarının çalışması için
+top 50% ve left 50% ve transform translate ile centerın içindeki herşeyi ortaladım
+yazı tipini sans serif verdim
+user select none ile center divinin içindeki yazıların başkaları tarafından kopyalanmamasını sağladım
+*/
+.container .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+/* .center h1 Başlangıç !
+
+rengini sarı yaptım
+font büyüklüğünü 40px yaptım
+font weight bold ile yazıları bi tık daha kalınlaştırma yaptım
+yükseklik 900px yaptım 
+text align center ile yazıları ortaladım 
+
+*/
+.center h1{
+    color:yellow;
+    font-size: 40px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+/* .center h2 Başlangıç !
+renk mavi
+yazı büyüklüğü 35px
+yükseklik 885 px
+h1 ile h2 nin yukarıdan aralarını açmak için 10px margin top verdim 
+h2 de ki yazıları ortalamak için text  align center yaptım 
+
+*/
+.center h2{
+    color: wheat;
+    font-size: 35px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* .center .buttons Başlangıç !
+ margin verme sebebim butonları yazıların tam altına hizalamak için 
+*/
+.center .buttons{
+    margin: 35px 280px;
+}
+/* .buttons button Başlangıç !
+
+genişlik 50px
+yükseklik 150px
+yazı büyüklüğü 15px
+rengi sarı 
+arka plan dark blue
+butonun çizgileri düz çizgi 1px kalınlık darkred renk 
+tıklama özelliği cursor pointer aktif
+outline none ile butona tıklandığında içinde kutucuk oluşuyordu onu yok ettim 
+border radius ile kenarlıkları 25px yumuşattım 
+transition .5s ile üzerine gelince yavaşlatma uyguladım
+
+*/
+.buttons button{
+    height: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background: pink;
+    border: solid 1px darkred;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+    transition: .5s;
+    margin-top: 150px;
+    margin-right: 40    0px;
+    margin-left: 350px;
+}
+
+.buttons button:hover{
+    background: #fff;
+
+}
+
+.images h1{
+    color: springgreen;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.images h2{
+    color: cyan;
+    font-size: 30px;
+    font-weight: initial;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.center img{
+    margin-left: 1600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESKİ KODLAR
+.container .Batubey{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.kk{
+    color: #ff6e00;
+}
+
+.form{
+    color: blue;
+}
+
+.add{
+    margin-bottom: 200px;
+    right: 50px;
+}
+
+
+.emaill{
+    margin-top: 10px;
+}
