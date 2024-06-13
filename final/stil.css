@@ -1,0 +1,418 @@
+*{
+    box-sizing: border-box; /* Sayfamdaki Padding border gibi değerleri eklediğimde içeriklerin genişlemesini önleme amaçlı Koydum. */  
+  }
+  
+  /*                      MENÜ ALANI BAŞLANGIÇ                                                                 */
+  body{
+      font-family: 'Nunito', sans-serif;
+      margin: 0; /*   Sayfanın kenarındaki boşlukları Kaldırmak için Kullandım    */
+  } 
+  
+  #menu{
+      height: 80px; /* Menü Kısmının Ekranda kaplayacağı Genişliği Belirttim */
+      padding: 0 20px;    /*    Soldan sağdan 20 pxlik bir boşluk verdim Menü kısmına Üst tarafa  */
+  }
+  
+  #logo{
+      font-size: 30px;
+      line-height: 80px;    /*    Logoyu Dikeyde Ortalamak İçin Kullandım Üstten ve alttaki boşlukları ortaladım Logonun */
+      color: #003666;
+      float: left;
+  }
+  
+  nav{
+      float: right;
+      line-height: 80px; /*   Logo İle Menüyü Yatayda birbirine hizalamak için Float right + line height yani satır yüksekliği kullandım */
+  }
+  
+  nav a:link{
+  text-decoration: none;
+  margin-right: 25px; /*    Anasayfa hakkımızda vs kısımlarının aralarını açmak için sağdan 25pxlik bi boşluk verdim       */
+  color: #003666;
+  }
+  
+  nav a:hover{
+      border-bottom: 2px solid #003666; /*    Fare ile anasayfa vs kısmına tıklayınca altı düz çizili bir görüntü vermesi için aşşağıdan bir border kullandım */
+  }
+  
+  nav a:visited{
+      text-decoration: none;
+  margin-right: 25px; 
+  color: #003666;
+  }
+  
+  .ikon{
+      margin-right: 7px; /*   İkon İle Metin arasına 7 pxlik boşluk koydum */
+      font-size: 16px;
+  }
+  
+      /*              MENÜ ALANI BİTİŞ !!                                                                                */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*                  BANNER ALANI BAŞLANGIÇ        - ORTA ALAN                                     */
+  
+  #anasayfa{
+      height: 700px; /*   Anasayfamın Boyutunu Ayarladım */
+      background-image: url("resim/r4.jpg");
+      background-size: cover; /*  Resmi 600pxlik alanımın içerisine sığdırmak için kullandım */
+      background-position: center; /*     Resmin Orta Kısmını Merkeze Almak İçin Kullandım */
+      background-attachment: fixed; /*   Görselin Maus İle Aşşağı indiğinde sabit durması için Kullandım     */
+  }
+  
+  #black{
+      height: 700px;
+      background-color: black;
+      opacity: 0.5; /*   Anasayfam için Kullandığım resme 700pxlik bir black divi koydum arka planı siyah yapıp opaklığını 0.5 yaparak rengin koyumsu görülmesini sağladım */
+  }
+  
+  /*                       RESMİN ÜZERİNE YAZILARI GETİRMEK İÇİN KULLANILAN İÇERİK DİVİNİN CSS BAŞLANGICI !                    */
+  
+  #icerik{ /*     Resmin Üzerine Yazıları Getirmek İçin Kullandığım CSS KISMI !    */
+      position: absolute; /*     Var Olan akışı bozan position durumudur */
+      top: 50%; /*     Yukarıdan yüzde 50lik bir konum aldırdım    */
+      left: 40%; /*    Soldan da Yüzde 40lık Bir Değer verdim       */
+      transform: translate(-50%, -50%); /*    İçeriğinin Tam orta noktasına Göre Konumlandırma İşlemi İçin Kullandım    1. İle sola doğru 2. ile yukarıya doğru kayma yaptm  */
+      color: white;
+      font-size: 20px;
+  }
+  
+  /*                              BANNER ALANI BİTİŞ !                                                                                 */
+  
+  
+  
+  
+  /*                              HAKKIMIZDA ALANI BAŞLANGIÇ !                                                    */
+  
+  #hakkimizda{
+      background-color: #f8f9fa;
+      padding: 50px;  /*     İÇERİKLERİ KENARDAN İÇE DOĞRU TAŞIMAK İÇİN VERDİM */
+      text-align: center;
+      text-transform: capitalize; /*    Her Kelimenin Baş Harflerinin Büyük Olması İçin Yaptım      */
+      font-weight: 500;
+  }
+  
+  h3{
+      font-size: 55px;
+      color: #003666;
+      text-shadow: 0px 1px 1px black; /*    H3 ÜN İÇİNDE YAZILARA GÖLGE VERDİM YATAYDA 0 PİKSEL DİKEYDE 1PX DAĞILMASI 1PX OLARAK AYARLADIM */
+      font-weight: 600;
+  }
+  
+  .container{
+      width: 1200px;
+      height: auto; /*      Resmin Sağdan Soldan boşluklarının Ortalanması için auto verdim      */
+      margin: auto;
+  }
+  
+  #sol{
+      float: left; /*    Akışını soldan devam ettirdim  */
+      border-right: 3px solid #445c6e; /*  BORDER RİGHT İLE ASLINDA ORTA ALANINI CONTAİNERİN YANİ ARASINA ÇİZGİ ATTIM HAKKIMIZDA KISMINI 2 YE BÖLDÜM   */
+      font-size: 30px;
+      width: 300px;
+      color: #1fc0ff;
+  }
+  
+  #h5sol{
+      line-height: 1.6; /*    Normal değerin 1.6 katına yükselttim yani %160 değerine    */
+  
+      font-size: 22px;
+      font-weight: 600;
+  }
+  
+  #h5sol, #sag{
+      margin-top: 20px;
+       margin: 0;
+       padding: 0;
+  }
+  
+  span{
+      font-size: 40px;
+      margin-right: 7px;
+      line-height: 42px;
+      color: #003666;
+      font-weight: 800;
+      float: left;
+  }
+  
+  #sag{
+      float: right;
+      width: 750px;
+      color: #fa0baa;
+      text-align: center;
+      letter-spacing: 1px; /*     SAĞ TARAFIN YAZI ARALIĞINI AÇMAK İÇİN KULLANDIM    */
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 100;
+  }
+  
+  .birinciimg{
+      max-width: 100%;
+      max-height: 400%;   
+      height: auto;
+  }
+  
+  .ikinciimg{
+      margin-top: 100px;
+  }
+  
+  #pson{
+      color: #fa0baa;
+      letter-spacing: 1px; /* HARF ARALIĞI */
+      font-size: 15px;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-top: 30px;
+      font-weight: 100;
+  }
+  
+  
+  
+  
+  
+  /*                                  HAKKIMIZDA ALANI BİTİŞ !                                                 */
+  
+  
+  
+  
+  
+  
+  
+  /*                                 EĞİTİMLER BÖLÜMÜ BAŞLANGIÇ !                                                                             */
+  
+  
+  #egitimler{
+      background-color: #fff;
+      padding: 50px;
+      text-align: center;
+      height: 700px;
+  }
+  
+  .kart{ /*     Resmi Küçültüp Borderın içine Küçük Kart Haline Getirmek İçin Yaptığım İşlemler !       */
+      width: 320px;
+      height: 350px;
+      border: 1px solid #ddd;
+      padding: 0;
+      display: inline-block; /*      KARTLARI YAN YANA KOYABİLMEK İÇİN BLOCK ETİKETİNE ALDIM      */
+  }
+  
+  .baslikkart{
+      font-size: 15px;
+      color: #ff0000;
+  }
+  
+  .kartp{
+      color: gray;
+  }
+  
+  .kart:hover{
+      border: 2px solid black;
+  }
+  
+  /*                                  EĞİTİM ALANI BİTİŞ !                                                                    */
+  
+  
+  
+  
+  
+  
+  
+  
+  /*                                 EKİP ALANI BAŞLANGIÇ                                                                       */
+  
+  
+  #ekip{
+      background-color: #003666;
+      padding: 50px;
+      height: 850px;
+      text-align: center;
+  }
+  
+  #ekiph3{
+      color: #fff;
+      font-weight: bold;
+  }
+  
+  .sutun-sol-sag{
+      width: 385px;
+      float: left;
+      padding: 50px;
+  }
+  
+  .oval{
+      border-radius: 50%; /*     EKİBİMİZİN İÇİNDEKİ RESİMLERİ TAMAMEN OVAL YANİ YUVARLAK HALE GETİRMEK İÇİN KULLANDIM. */
+  }
+  
+  .ekipisim{
+      color: #fff;
+      font-size: 25px;
+      margin-bottom: 8px;
+  }
+  
+  .ekipp{
+      color: rgb(12, 227, 255);
+      font-size: 20px;
+  }
+  
+  .sosyal{
+      color: #00ffff;
+      border: 1px solid #fff;
+      padding: 10px;
+      width: 50px;
+      border-radius: 6px;
+      margin: 5px 10px;
+  }
+  
+  .sosyal2{
+  color: #f502e1;
+  border: 1px solid #fff;
+      padding: 10px;
+      width: 50px;
+      border-radius: 6px;
+      margin: 5px 10px;
+  }
+  
+  .sosyal3{
+      color: #ff0000;
+      border: 1px solid #fff;
+      padding: 10px;
+      width: 50px;
+      border-radius: 6px;
+      margin: 5px 10px;
+  }
+  
+  .sosyal:hover{
+  background-color: #888;
+  }
+  
+  .sosyal2:hover{
+      background-color: #888;
+  }
+  
+  .sosyal3:hover{
+      background-color: #888;
+  }
+  
+  /*                                  EKİP ALANI BİTİŞ !                                                                    */
+  
+  
+  
+  /*                                  İLETİŞİM ALANI BAŞLANGIÇ !                                                             */
+  
+  #iletisim{
+      background: url(resim/r2.jpg);
+      background-size: cover;
+      padding: 50px;
+      height: auto;
+      text-align: center;
+      
+  }
+  
+  #h3iletisim{
+      color: #d3c5c5;
+  }
+  
+  #iletisimopak{
+      background: rgba(0, 0, 0, 0.2); /*       OPAKLIK VERDİĞİM KISIM BURASI ARKAPLANA 0.2 İLE  */
+      padding: 30px 20px;
+      border-radius: 3px;
+      margin-bottom: 50px;
+      height: 550px;
+      
+  }
+  
+  #formgrup{
+      width: 700px;
+      float: left;
+      height: 500px;
+      text-align: left;
+      
+  }
+  
+  #solform{
+      width: 50%;
+      float: left;
+      padding-right: 5px;
+      
+  }
+  
+  #sagform{
+      width: 50%;
+      float: left;
+      padding-left: 5px;
+  }
+  
+  .form-control{
+  width: 100%;
+  padding: 10 px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  
+  }
+  
+  textarea{
+      font-family: Arial;
+      
+  }
+  
+  input[type="submit"]{
+      cursor:pointer;
+      background-color: #007fe0;
+      font-size: 18px;
+      letter-spacing: 1px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: 2px solid white;
+      color: white;
+      margin-left: 300px;
+      margin-top: 15px;
+      
+  }
+  
+  #adres{
+      width: 450px;
+      float: right;
+      padding: 30px;
+      height: 500px;
+      text-align: left;
+  }
+  
+  #adresbaslik{
+      font-size: 30px;
+      color: #fff;
+  }
+  
+  .adresp{
+      color: #f7f7f7;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+  }
+  
+  #copyright{
+      color: #fff;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+  }
+  
+  #yukaributonu{
+      color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      font-size: 15px;
+      padding: 9px 13px;
+      margin-top: 20px;
+  }
+  
+   
